@@ -1,17 +1,25 @@
 This Python code performs several tasks related to extracting, processing, and querying information from PDF files using different libraries such as PyMuPDF (for PDF extraction), FAISS (for similarity search), and Hugging Face transformers (for generating text embeddings). Here's a breakdown of what each section of the code does:
+
 To setup the project:
+
 commands:
+
 python -m venv venv
+
 venv/Scripts/activate
+
 pip install -r requirements.txt
+
 To run: python app.py
 
 **You might face this error**:
+
 OMP: Error #15: Initializing libomp140.x86_64.dll, but found libiomp5md.dll already initialized.
 OMP: Hint This means that multiple copies of the OpenMP runtime have been linked into the program. That is dangerous, since it can degrade performance or cause incorrect results. The best thing to do is to ensure that only a single OpenMP runtime is linked into the process, e.g. by avoiding static linking of the OpenMP runtime in any library. As an unsafe, unsupported, undocumented workaround you can set the environment variable KMP_DUPLICATE_LIB_OK=TRUE to allow the program to continue to execute, but that may cause crashes or silently produce incorrect results. For more information, please see http://openmp.llvm.org/
 
 **Run this command to clear that**: $env:KMP_DUPLICATE_LIB_OK = "TRUE"
 **Explanation**
+
 ### 1. Imports
 - **fitz (PyMuPDF)**: Used to extract text from PDF files.
 - **numpy**: Used for numerical operations, specifically to handle arrays and embeddings.
