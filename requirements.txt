@@ -1,0 +1,6 @@
+fitz  # PyMuPDF
+numpy
+faiss-cpu  # For CPU-based FAISS
+transformers
+torch
+regex
